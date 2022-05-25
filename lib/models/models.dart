@@ -1,0 +1,1 @@
+export 'package:app_state_flutter/models/user_model.dart';
