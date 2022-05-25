@@ -3,5 +3,10 @@ class UserModel {
   String age;
   List<String> professions;
 
-  UserModel({required this.name, required this.age, required this.professions});
+  UserModel({
+    required this.name,
+    required this.age,
+    required this.professions,
+  });
+  // : assert(name.isNotEmpty);
 }
