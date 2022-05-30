@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 // Widgets
@@ -8,6 +9,10 @@ class TwoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /* print(Get.arguments);
+    print(Get.arguments['name']);
+    print(Get.arguments['age']); */
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Screen #1'),
