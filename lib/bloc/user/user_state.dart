@@ -3,6 +3,8 @@
 
 part of 'user_bloc.dart';
 
+/* La Clase Abstracta Me Ayuda A Decirle A Mi Bloc El Tipo De Estados Con El Que 
+La Aplicación Va A Trabajar Que En Este Caso, Son Del Tipo UserState */
 @immutable
 abstract class UserState {
   final bool isUserExist;

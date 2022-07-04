@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -54,8 +52,10 @@ class ButtonsUserInformation extends StatelessWidget {
           ),
           MaterialButton(
             color: Colors.blue,
-            child: const Text('Add Profession',
-                style: TextStyle(color: Colors.white)),
+            child: const Text(
+              'Add Profession',
+              style: TextStyle(color: Colors.white),
+            ),
             onPressed: () {
               userBlocProvider.add(AdUserProfessionEvent('Profesión Estatica'));
             },

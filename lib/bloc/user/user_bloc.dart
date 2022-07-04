@@ -17,14 +17,10 @@ part 'user_state.dart';
 /* Disponemos De La Palabra state, Por La Palabra "Bloc" */
 class UserBloc extends Bloc<UserEvent, UserState> {
   UserBloc() : super(const UserInitialState()) {
+    /* AQUÍ TENGO EL MANEJO DE TODOS LOS EVENTOS QUE SE DEFINIERON PARA ESTE BLOC */
     on<ActivateUserEvent>((event, emit) {
       // print('Activated User Called');
       emit(UserSetState(newUser: event.user));
-    });
-
-    on<DeleteUserEvent>((event, emit) {
-      // print('Activated User Called');
-      emit(const UserInitialState());
     });
 
     on<ChangeUserAgeEvent>((event, emit) {
@@ -45,6 +41,11 @@ class UserBloc extends Bloc<UserEvent, UserState> {
           newUser: state.user!.copyWith(professions: professions),
         ),
       );
+    });
+
+    on<DeleteUserEvent>((event, emit) {
+      // print('Delete User Called');
+      emit(const UserInitialState());
     });
   }
 }
